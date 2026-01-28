@@ -25,8 +25,6 @@ export default function Footer() {
     const partnerSection = partnerSectionRef.current;
 
     if (!section || !image) return;
-
-    // ================= BACKGROUND IMAGE PARALLAX =================
     const imageHeight = image?.offsetHeight;
     const sectionHeight = section.offsetHeight;
     const scrollDistance = imageHeight - sectionHeight;
