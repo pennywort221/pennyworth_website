@@ -117,20 +117,23 @@ export default function WhyPennywortSection() {
               We collaborate with some of the biggest and most trusted companies
               in India to bring high-quality products to life. Over the years,
               PW has built strong, long-term relationships with top
-              manufacturers across the country.
+              manufacturers across the country—giving us unmatched access to
+              India’s production capacity.
             </p>
           </div>
 
           <div className="space-y-4">
             <p ref={(el: any) => (textRefs.current[2] = el)}>
               With our nationwide network, PW can manufacture and deliver almost
-              any product on time and at scale.
+              any product on time and at scale, ensuring consistency,
+              reliability, and competitive turnaround.
             </p>
 
             <p ref={(el: any) => (textRefs.current[3] = el)}>
-              Our reputation for trust, transparency, and deep connection with
+              Our reputation for trust, transparency, and deep connections with
               high-end companies worldwide makes Pennywort Limited a preferred
-              partner.
+              partner for businesses seeking quality production and seamless
+              delivery.
             </p>
           </div>
         </div>

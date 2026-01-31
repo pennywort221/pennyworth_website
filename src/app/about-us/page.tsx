@@ -18,7 +18,7 @@ import { useState } from "react";
 const AboutUsPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <>
+    <main className="overflow-x-hidden">
       <HeroSection onMenuOpen={() => setIsMenuOpen(true)} />
       <ManufacturingMasterySection />
       <ThreePillarsSection />
@@ -35,7 +35,7 @@ const AboutUsPage = () => {
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
       />
-    </>
+    </main>
   );
 };
 

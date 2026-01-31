@@ -92,10 +92,12 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 sm:px-10 md:gap-12 mb-10">
           {[
-            `Pennywort is India's leading contract manufacturer of premium
-            workwear and safety apparel...`,
-            `With ISO 9001:2015 certification and over one decades of
-            manufacturing expertise...`,
+            `Pennywort is India's leading contract manufacturer of premium workwear and safety apparel. 
+            Based in Kerala, we specialize in flame-resistant clothing (FRC), inherently flame-resistant (IFR) garments, 
+            and custom uniforms for industries that demand uncompromising quality and safety.`,
+            `With ISO 9001:2015 certification and over one decades of manufacturing expertise, we serve construction, 
+            oil & gas, healthcare, hospitality, and corporate sectors across the globe.
+             Our commitment goes beyond clothing—we engineer confidence, one garment at a time.`,
           ].map((text, i) => (
             <p
               key={i}

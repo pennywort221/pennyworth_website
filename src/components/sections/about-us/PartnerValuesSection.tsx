@@ -65,6 +65,7 @@ export default function PartnerValuesSection() {
                 text={text}
                 isRight={(i + 1) % 3 !== 0}
                 isBottom={i < 3}
+                isBottomMd={i < 6}
               />
             </div>
           ))}

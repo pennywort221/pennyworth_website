@@ -64,7 +64,7 @@ export default function Footer() {
     if (partnerSection) {
       gsap.fromTo(
         partnerSection,
-        { y: 60, opacity: 0 },
+        { y: 60 },
         {
           y: 0,
           opacity: 1,
@@ -86,7 +86,7 @@ export default function Footer() {
     <footer className="relative">
       <section
         ref={sectionRef}
-        className="relative bg-primary overflow-hidden md:h-[100vh] h-[1000px]"
+        className="relative bg-primary overflow-hidden md:h-[90vh] h-[1000px]"
       >
         <img
           ref={imageRef}
@@ -153,7 +153,7 @@ export default function Footer() {
         <hr className="mt-10" />
 
         <div className="flex flex-col md:flex-row justify-between text-body-xs text-primary/50 gap-3 my-4">
-          <span>© 2025 Pennyworth Clothing | All rights reserved.</span>
+          <span>© 2026 Pennyworth Clothing | All rights reserved.</span>
           <span>Powered by Equixsolutions</span>
         </div>
       </section>
@@ -181,7 +181,29 @@ export default function Footer() {
                       : "text-muted-secondary"
                   }`}
                 >
-                  {line}
+                  {line.includes("www.") ? (
+                    <a
+                      href={`https://${line}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {line}
+                    </a>
+                  ) : line.includes("@") ? (
+                    <a href={`mailto:${line}`} className="hover:underline">
+                      {line}
+                    </a>
+                  ) : line.startsWith("+") ? (
+                    <a
+                      href={`tel:${line.replace(/[^+\d]/g, "")}`}
+                      className="hover:underline"
+                    >
+                      {line}
+                    </a>
+                  ) : (
+                    line
+                  )}
                 </p>
               ))}
             </div>

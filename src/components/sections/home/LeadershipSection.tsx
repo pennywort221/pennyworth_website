@@ -96,7 +96,9 @@ const LeadershipSection = () => {
           >
             With over 10 years in textile manufacturing and industrial safety
             apparel, Anand Paul has steered Pennywort from a regional player to
-            a nationally recognized brand.
+            a nationally recognized brand. His vision of combining international
+            quality standards with competitive pricing has been the cornerstone
+            of Pennywort's growth..
           </p>
 
           <div className="relative">
@@ -112,9 +114,10 @@ const LeadershipSection = () => {
               ref={(el: any) => (textRef.current[1] = el)}
               className="absolute top-[0px] lg:top-[170px] md:text-body-md text-body-xs z-10"
             >
-              Every piece of workwear we produce carries the weight of someone’s
-              safety. That responsibility drives us to never compromise on
-              quality.
+              "Every piece of workwear we produce carries the weight of
+              someone's safety. That responsibility drives us to never
+              compromise on quality, no matter the order size or timeline
+              pressure.".
               <br className="lg:hidden block" />
               <strong>— Anand Paul</strong>
             </p>

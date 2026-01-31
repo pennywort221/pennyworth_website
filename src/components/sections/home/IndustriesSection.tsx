@@ -20,6 +20,11 @@ export default function IndustriesSection() {
       ? industries[hoveredIndex].image
       : industries[0].image;
 
+  const activeDescription =
+    hoveredIndex !== null
+      ? industries[hoveredIndex].discription
+      : industries[0].discription;
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       const items = gsap.utils.toArray<HTMLElement>(".industry-item");
@@ -60,7 +65,6 @@ export default function IndustriesSection() {
       </div>
 
       <div className="grid md:grid-cols-3 items-start gap-10">
-    
         <div className="relative w-full max-w-sm">
           <div className="relative bg-primary h-[520px]">
             <Image
@@ -74,7 +78,7 @@ export default function IndustriesSection() {
           </div>
 
           <p className="text-body-md text-body-sm text-muted-foreground mt-10">
-            Safety vests, coveralls, work gloves, high-vis jackets
+            {activeDescription}
           </p>
         </div>
         <div className="w-full md:col-span-2">

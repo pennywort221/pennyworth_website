@@ -72,36 +72,43 @@ export const industries = [
     label: "Oil, Gas & Energy",
     icon: GasPump,
     image: "/assets/images/design/industries_1.png",
+    discription: "FR/IFR coveralls, arc-rated clothing, flame-resistant gloves",
   },
   {
     label: "Healthcare & Medical",
     icon: Heartbeat,
     image: "/assets/images/design/industries_2.png",
+    discription: "Scrubs, lab coats, patient gowns, medical uniforms",
   },
   {
     label: "Corporate & Retail",
     icon: BuildingOffice,
     image: "/assets/images/design/industries_3.png",
+    discription:"Branded t-shirts, polo shirts, office uniforms, event apparel",
   },
   {
     label: "Manufacturing & Industrial",
     icon: FactoryTS,
     image: "/assets/images/design/industries_4.png",
+    discription: "Coveralls, safety gloves, protective workwear, boiler suits",
   },
   {
     label: "Construction & Infrastructure",
     icon: PipeWrench,
     image: "/assets/images/design/industries_5.png",
+    discription: "Safety vests, coveralls, work gloves, high-vis jackets",
   },
   {
     label: "Hospitality & Tourism",
     icon: Island,
     image: "/assets/images/design/industries_6.png",
+    discription: "Chef uniforms, housekeeping attire, front-desk apparel",
   },
   {
     label: "Logistics & Warehousing",
     icon: TruckTS,
     image: "/assets/images/design/industries_7.png",
+    discription: "Hi-vis vests, cargo pants, durable workwear",
   },
 ];
 

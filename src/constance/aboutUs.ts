@@ -1,11 +1,11 @@
 export const items = [
   { src: "/assets/images/design/threepillers_1.png", label: "Quality" },
-  { src: "/assets/images/design/threepillers_2.png", label: "Safety" },
+  { src: "/assets/images/design/about_2.png", label: "Safety" },
   { src: "/assets/images/design/threepillers_3.png", label: "Comfort" },
-  { src: "/assets/images/design/threepillers_4.png", label: "Quality" },
+  { src: "/assets/images/design/hero_about_1.png", label: "Quality" },
   { src: "/assets/images/design/threepillers_5.png", label: "Safety" },
-  { src: "/assets/images/design/threepillers_6.png", label: "Quality" },
-  { src: "/assets/images/design/threepillers_7.png", label: "Safety" },
+  { src: "/assets/images/design/suit.png", label: "Quality" },
+  { src: "/assets/images/design/zig_zag.png", label: "Safety" },
 ];
 
 export const features = [
