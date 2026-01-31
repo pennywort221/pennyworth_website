@@ -16,7 +16,6 @@ export default function MissionVisionSection() {
   return (
     <section className="bg-secondary py-16 md:py-24 px-5 md:px-10">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* MISSION */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
