@@ -39,7 +39,7 @@ const certifications = [
     showDivider: true,
   },
   {
-    src: "/assets/images/logo/oeko_certification.png",
+    src: "/assets/images/logo/oeko.png",
     desc: "Textile Safety (Select Products)",
   },
 ];
