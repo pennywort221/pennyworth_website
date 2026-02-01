@@ -11,7 +11,6 @@ function ProductsOverviews({ items = [] }: any) {
         </h2>
         <hr className="border-t border-main border-muted-foreground/50" />
       </div>
-
       {items.map((variant: any, idx: number) => (
         <ProductOverview key={idx} {...variant} />
       ))}

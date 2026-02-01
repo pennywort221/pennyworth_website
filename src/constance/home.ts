@@ -23,11 +23,27 @@ export const menuItems = [
 ];
 
 export const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: x, href: "#", label: "Twitter" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/company/pennyworthindia/?originalSubdomain=in",
+    label: "LinkedIn",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/pennywort_limited/",
+    label: "Instagram",
+  },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/pennyworthclothing/",
+    label: "Facebook",
+  },
+  {
+    icon: Youtube,
+    href: "https://www.youtube.com/channel/UCRZ5Eg0COuFubdiVovS2dAQ",
+    label: "YouTube",
+  },
+  { icon: x, href: "https://x.com/PennyworthC", label: "Twitter" },
 ];
 
 export const values = [
@@ -84,7 +100,8 @@ export const industries = [
     label: "Corporate & Retail",
     icon: BuildingOffice,
     image: "/assets/images/design/industries_3.png",
-    discription:"Branded t-shirts, polo shirts, office uniforms, event apparel",
+    discription:
+      "Branded t-shirts, polo shirts, office uniforms, event apparel",
   },
   {
     label: "Manufacturing & Industrial",
@@ -213,14 +230,14 @@ export const footerLinksData = [
   {
     label: "Download Catalog",
     description: "Browse our complete product range",
-    url: "/contact-us",
+    url: "/assets/files/COVERALL_BROCHURE.pdf",
+    download: true,
   },
 ];
 
 export const navigationLinks = [
   { label: "HOME", url: "/" },
   { label: "ABOUT US", url: "/about-us" },
-  { label: "CUSTOMIZE WEAR", url: "/customize-wear" },
   { label: "BLOG", url: "/blog" },
   { label: "CONTACT US", url: "/contact-us" },
 ];
@@ -240,7 +257,7 @@ export const visitUsData = [
     lines: [
       "+91-9446666055 | +91-9447544448",
       "office@pennywort.in",
-      "www.pwort.com",
+      "www.pennywort.in",
     ],
   },
   {

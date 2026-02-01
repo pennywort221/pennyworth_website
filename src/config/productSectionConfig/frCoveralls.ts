@@ -13,7 +13,7 @@ export const frCoverallsConfig: ProductConfig = {
     { type: "productSpecifications" },
     { type: "testingQuality" },
     { type: "careAndMaintenance" },
-    { type: "parallax" },
+    // { type: "parallax" },
     { type: "bulkBenefits" },
     { type: "similarProducts" },
   ],

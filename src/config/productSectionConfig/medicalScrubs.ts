@@ -1,4 +1,4 @@
-import { fitStyleData } from "@/constance/products/corporateTshirts";
+import { fitStyleData, fitStyleScrub } from "@/constance/products/corporateTshirts";
 import {
   bulkOrderAndProgramsSection,
   careInstructions,
@@ -16,7 +16,7 @@ export const medicalScrubsConfig: ProductConfig = {
     { type: "overview" },
     { type: "featureGrid", props: customizationServicesSection },
     { type: "standardScrubColors" },
-    { type: "fitStyle", props: fitStyleData },
+    { type: "fitStyle", props: fitStyleScrub },
     { type: "infoGrid", props: sizeRangeGuide },
     { type: "featureOptions", props: careInstructions },
     { type: "featureCombined", props: bulkOrderAndProgramsSection },

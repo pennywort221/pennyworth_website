@@ -1,6 +1,7 @@
 import {
   designPlacementGuide,
   fitStyleData,
+  fitStyleGlove,
   printingOptionsSection,
 } from "@/constance/products/corporateTshirts";
 import {
@@ -17,7 +18,7 @@ export const workGlovesConfig: ProductConfig = {
     { type: "overview" },
     { type: "chooseByTask" },
     { type: "featureOptions", props: customizationOptions },
-    { type: "fitStyle", props: fitStyleData },
+    { type: "fitStyle", props: fitStyleGlove },
     { type: "similarProducts" },
   ],
 };

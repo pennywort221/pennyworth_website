@@ -108,13 +108,24 @@ export default function Footer() {
               {footerLinksData.map((link, i) => (
                 <div key={i} className="w-[250px]">
                   <div className="flex justify-between mb-4">
-                    <Link href={link.url}>
-                      <span className="text-secondary md:text-body-md-bold text-body-sm-bold">
+                    {link.download ? (
+                      <a
+                        href={link.url}
+                        download
+                        className="text-secondary md:text-body-md-bold text-body-sm-bold"
+                      >
                         {link.label}
-                      </span>
-                    </Link>
+                      </a>
+                    ) : (
+                      <Link href={link.url}>
+                        <span className="text-secondary md:text-body-md-bold text-body-sm-bold">
+                          {link.label}
+                        </span>
+                      </Link>
+                    )}
                     <ArrowRight className="text-secondary" />
                   </div>
+
                   <hr className="border-muted-secondary_light mb-3" />
                   <p className="text-muted-secondary md:text-body-md text-body-xs">
                     {link.description}
@@ -154,7 +165,11 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between text-body-xs text-primary/50 gap-3 my-4">
           <span>© 2026 Pennyworth Clothing | All rights reserved.</span>
-          <span>Powered by Equixsolutions</span>
+          <span>
+            <a href="https://equixsolutions.com/" target="_black">
+              Powered by Equixsolutions
+            </a>
+          </span>
         </div>
       </section>
       <div

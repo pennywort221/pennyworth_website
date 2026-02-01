@@ -4,7 +4,6 @@ import React, { useLayoutEffect, useRef } from "react";
 import Menu from "@/assets/svg/menu.svg";
 import Image from "next/image";
 import gsap from "gsap";
-import Link from "next/link";
 
 interface HeroSectionProps {
   onMenuOpen: () => void;
@@ -56,8 +55,8 @@ function HeroSection({ onMenuOpen }: HeroSectionProps) {
       </button>
       <div className="md:absolute inset-0 grid md:grid-cols-5 grid-cols-3">
         <div className="relative col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-8 grid-rows-4">
-          <div className="relative col-span-6 row-span-1 flex items-start p-6 md:p-10">
-            <Link href="/" aria-label="Go to home">
+          <div className="relative z-30 col-span-6 row-span-1 flex items-start p-6 md:p-10">
+            <a href="/" aria-label="Go to home" className="relative z-30">
               <Image
                 src="/assets/images/design/penny-wort-logo.png"
                 alt="Penny Wort Logo"
@@ -66,7 +65,7 @@ function HeroSection({ onMenuOpen }: HeroSectionProps) {
                 priority
                 className="cursor-pointer"
               />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="relative md:h-[100%] h-[50vh] grid grid-cols-6 md:grid-cols-2 md:grid-rows-6 grid-rows-10 col-span-2 md:mr-16 gap-1">

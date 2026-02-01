@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import {  X } from "lucide-react";
 import ArrowRight from "@/assets/svg/arrow.svg";
 import { menuItems, socialLinks } from "@/constance/home";
+import Link from "next/link";
 
 interface NavigationMenuProps {
   isOpen: boolean;
@@ -91,7 +92,7 @@ const NavigationMenu = ({ isOpen, onClose }: NavigationMenuProps) => {
               className="flex items-center gap-6 mb-5"
             >
               {socialLinks.map((social) => (
-                <a
+                <Link
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
@@ -104,7 +105,7 @@ const NavigationMenu = ({ isOpen, onClose }: NavigationMenuProps) => {
                   transition-colors duration-300"
                 >
                   <social.icon className="w-4 h-4 text-secondary shrink-0" />
-                </a>
+                </Link>
               ))}
             </motion.div>
           </motion.div>

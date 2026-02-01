@@ -50,8 +50,8 @@ export default function PartnerWithUsSection() {
   return (
     <section ref={sectionRef}>
       <div className="mx-auto pt-20">
-        <div className="mb-10 md:px-10">
-          <h2 className="md:text-body-lg text-body-sm text-primary mb-2 px-5 md:px-10">
+        <div className="mb-10 md:px-10 px-5">
+          <h2 className="md:text-body-lg text-body-sm text-primary mb-2  ">
             Partner with Us
           </h2>
           <hr className="border-t border-main border-muted-foreground/50" />
@@ -101,13 +101,19 @@ export default function PartnerWithUsSection() {
                 </div>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-10 flex gap-2">
                 <Link href="/contact-us">
                   <button className="inline-flex items-center gap-2 border border-primary px-6 py-3 text-sm md:text-base hover:bg-primary hover:text-secondary transition">
                     Apply for Partnership
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
                 </Link>
+                <a href="/assets/files/PENNYWORT.pdf" download>
+                  <button className="inline-flex items-center gap-2 border border-primary px-6 py-3 text-sm md:text-base hover:bg-primary hover:text-secondary transition">
+                    Become a Partner
+                    <ArrowUpRight className="w-4 h-4" />
+                  </button>
+                </a>
               </div>
             </div>
           </div>

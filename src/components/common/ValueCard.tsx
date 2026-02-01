@@ -2,10 +2,12 @@ const ValueCard = ({
   title,
   order,
   mobileHeight = false,
+  discription
 }: {
   title: React.ReactNode;
   order: string;
   mobileHeight?: boolean;
+  discription:string
 }) => {
   return (
     <div
@@ -33,9 +35,7 @@ const ValueCard = ({
         </h3>
 
         <p className="md:text-body-sm text-body-xs leading-5 text-secondary/60 text-center max-w-[260px]">
-          We deliver international-grade workwear at competitive Indian
-          manufacturing rates—giving you premium quality without the premium
-          price tag.
+         {discription}
         </p>
       </div>
     </div>

@@ -124,7 +124,7 @@ function TestimonialSection() {
               />
             ))}
           </div>
-          <Link href="/blogs">
+          {/* <Link href="/blogs">
             <Button
               variant="heroPrimary"
               size="lg"
@@ -133,7 +133,7 @@ function TestimonialSection() {
               Read More Success Stories
               <ArrowRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

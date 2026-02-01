@@ -149,6 +149,44 @@ export const fitStyleData = {
     },
   ],
 };
+export const fitStyleGlove = {
+  title: "Bulk Order Benefits",
+  fitStyles: [
+    "100-500 pairs: Standard pricing",
+    "500-1,000 pairs: 8% discount",
+    "1,000-2,500 pairs: 12% discount",
+    "2,500+ pairs: 15% discount",
+  ],
+  images: [
+    {
+      src: "/assets/images/design/glove_2.png",
+      alt: "Neck label detail",
+    },
+    {
+      src: "/assets/images/design/glove_1.png",
+      alt: "Model wearing t-shirt",
+    },
+  ],
+};
+export const fitStyleScrub = {
+  title: "Color-Coding Benefits",
+  fitStyles: [
+    "Department identification",
+    "Role distinction (nurses, techs, students)",
+    "Enhanced professional organization",
+    "Custom Colors: Available for orders 500+ pieces (Pantone matching)",
+  ],
+  images: [
+    {
+      src: "/assets/images/design/scrub_1.png",
+      alt: "Neck label detail",
+    },
+    {
+      src: "/assets/images/design/scrub_2.png",
+      alt: "Model wearing t-shirt",
+    },
+  ],
+};
 
 export const designPlacementGuide = {
   heading: "Design & Placement Guide",

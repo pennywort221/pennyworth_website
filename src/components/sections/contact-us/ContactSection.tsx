@@ -111,8 +111,8 @@ function ContactSection() {
               size="lg"
               className="group w-[250px] md:text-body-md text-body-sm leading-relaxed p-2 text-primary border border-primary md:px-6 md:py-3"
             >
-              Please fill the form
-              <ArrowRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              Submit
+              {/* <ArrowRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" /> */}
             </Button>
           </div>
         </div>
