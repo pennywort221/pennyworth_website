@@ -12,13 +12,13 @@ export const heroTShirtsConfig = {
 
   images: [
     {
-      src: "/assets/images/design/tShirts/hero_1.png",
+      src: "/assets/images/design/tShirts/tshirt_1.png",
       alt: "Workwear Model Blue",
       className:
         "relative md:col-start-1 row-start-1 row-end-4 md:col-span-1 col-span-2 md:row-start-7 md:row-end-2",
     },
     {
-      src: "/assets/images/design/tShirts/hero_2.png",
+      src: "/assets/images/design/tShirts/tshirt_2.png",
       alt: "Workwear Model Orange",
       className:
         "relative md:col-start-2 col-start-3 row-start-7 row-end-3 md:row-start-1 md:row-end-6",

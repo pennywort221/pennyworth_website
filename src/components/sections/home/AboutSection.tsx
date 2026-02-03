@@ -78,7 +78,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="overflow-x-hidden">
+    <section ref={sectionRef} className="overflow-hidden">
       <div className="mx-auto sm:px-0 px-5">
         <div className="sm:px-10 mb-8">
           <h2

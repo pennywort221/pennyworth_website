@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Menu from "@/assets/svg/menu.svg";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 
@@ -15,18 +15,54 @@ function HeroSection({ onMenuOpen }: HeroSectionProps) {
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const paraRef = useRef<HTMLParagraphElement | null>(null);
 
+  const menuBtnRef = useRef<HTMLButtonElement>(null);
+  const lastScrollY = useRef(0);
+
+  useLayoutEffect(() => {
+    if (!menuBtnRef.current) return;
+    if (window.innerWidth >= 768) return;
+
+    const showBtn = () => {
+      gsap.to(menuBtnRef.current, {
+        y: 0,
+        opacity: 1,
+        duration: 0.35,
+        ease: "power3.out",
+        overwrite: "auto",
+      });
+    };
+
+    const hideBtn = () => {
+      gsap.to(menuBtnRef.current, {
+        y: -30,
+        opacity: 0,
+        duration: 0.35,
+        ease: "power3.out",
+        overwrite: "auto",
+      });
+    };
+
+    const onScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScrollY.current && currentScroll > 100) {
+        hideBtn();
+      } else {
+        showBtn();
+      }
+
+      lastScrollY.current = currentScroll;
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   useEffect(() => {
     if (!sectionRef.current || !headingRef.current || !paraRef.current) return;
 
     const ctx = gsap.context(() => {
-      /* HEADER (logo + menu) */
-      gsap.from(".hero-header", {
-        opacity: 0,
-        y: -20,
-        duration: 0.8,
-        ease: "power3.out",
-      });
-
+    
       /* WORD-BY-WORD HEADING */
       const words: any = headingRef.current?.querySelectorAll(".hero-word");
 
@@ -78,10 +114,29 @@ function HeroSection({ onMenuOpen }: HeroSectionProps) {
         </Link>
 
         <button
+          ref={menuBtnRef}
           onClick={onMenuOpen}
-          className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center"
+          className="
+    fixed top-6 right-10 z-30
+    w-12 h-12 rounded-full
+    flex items-center justify-center
+
+    /* DEFAULT (mobile) */
+    bg-primary
+    backdrop-blur-lg
+    border border-white/20
+    shadow-lg
+
+    /* DESKTOP OVERRIDE */
+    md:bg-primary
+    md:backdrop-blur-none
+    md:border-none
+    md:shadow-none
+
+    transition-all
+  "
         >
-          <Menu className="text-primary" />
+          <Menu className="text-secondary" />
         </button>
       </div>
 

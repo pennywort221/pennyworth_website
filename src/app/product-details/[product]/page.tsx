@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import { client } from "@/sanity/client";
 import { productBySlugQuery } from "@/sanity/queries";
 import { mapSanityProductToConfig } from "@/lib/productAdapter";
+import { V4MAPPED } from "dns";
 
 function Product() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ function Product() {
   // CMS config
   const [cmsConfig, setCmsConfig] = useState<any | null>(null);
   const [cmsChecked, setCmsChecked] = useState(false);
-
+  
   useEffect(() => {
     if (!product) return;
 
@@ -43,7 +44,7 @@ function Product() {
   const finalHero = cmsConfig?.hero ?? hardConfig?.hero;
 
   const finalSections = [
-    ...(cmsConfig?.sections ?? []), // productAbout + overview from CMS
+    ...(cmsConfig?.sections ?? []), 
     ...(hardConfig?.sections ?? []).filter(
       (s: any) =>
         s.type !== "productAbout" &&

@@ -13,6 +13,48 @@ function HeroSection({ onMenuOpen }: HeroSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const imageRefs = useRef<HTMLDivElement[]>([]);
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const menuBtnRef = useRef<HTMLButtonElement>(null);
+  const lastScrollY = useRef(0);
+
+  useLayoutEffect(() => {
+    if (!menuBtnRef.current) return;
+    if (window.innerWidth >= 768) return;
+
+    const showBtn = () => {
+      gsap.to(menuBtnRef.current, {
+        y: 0,
+        opacity: 1,
+        duration: 0.35,
+        ease: "power3.out",
+        overwrite: "auto",
+      });
+    };
+
+    const hideBtn = () => {
+      gsap.to(menuBtnRef.current, {
+        y: -30,
+        opacity: 0,
+        duration: 0.35,
+        ease: "power3.out",
+        overwrite: "auto",
+      });
+    };
+
+    const onScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScrollY.current && currentScroll > 100) {
+        hideBtn();
+      } else {
+        showBtn();
+      }
+
+      lastScrollY.current = currentScroll;
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useLayoutEffect(() => {
     if (!sectionRef.current) return;
@@ -48,10 +90,29 @@ function HeroSection({ onMenuOpen }: HeroSectionProps) {
       className="relative bg-primary overflow-hidden md:min-h-[70vh] md:h-auto h-[50vh]"
     >
       <button
+        ref={menuBtnRef}
         onClick={onMenuOpen}
-        className="absolute top-6 right-10 z-20 w-12 h-12 rounded-full bg-secondary flex items-center justify-center"
+        className="
+    fixed top-6 right-10 z-30
+    w-12 h-12 rounded-full
+    flex items-center justify-center
+
+    /* DEFAULT (mobile) */
+    bg-primary
+    backdrop-blur-lg
+    border border-white/20
+    shadow-lg
+
+    /* DESKTOP OVERRIDE */
+    md:bg-primary
+    md:backdrop-blur-none
+    md:border-none
+    md:shadow-none
+
+    transition-all
+  "
       >
-        <Menu className="text-primary" />
+        <Menu className="text-secondary" />
       </button>
       <div className="md:absolute inset-0 grid md:grid-cols-5 grid-cols-3">
         <div className="relative col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-8 grid-rows-4">
