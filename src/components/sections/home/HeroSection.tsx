@@ -24,8 +24,6 @@ const HeroSection = ({ onMenuOpen, ready }: HeroSectionProps) => {
 
   useLayoutEffect(() => {
     if (!menuBtnRef.current) return;
-    if (window.innerWidth >= 768) return;
-
     const showBtn = () => {
       gsap.to(menuBtnRef.current, {
         y: 0,
