@@ -138,7 +138,7 @@ const HeroSection = ({ onMenuOpen, ready }: HeroSectionProps) => {
             className="relative col-span-4 md:row-start-4 row-start-6 row-span-1 overflow-hidden md:ml-10 ml-4 md:w-auto w-[240px]"
           >
             <Image
-              src="/assets/images/design/hero_page.png"
+              src="/assets/images/design/home_2.png"
               loading="lazy"
               alt="Workwear background"
               fill
@@ -152,7 +152,7 @@ const HeroSection = ({ onMenuOpen, ready }: HeroSectionProps) => {
         >
           <div className="relative overflow-hidden col-span-4 sm:col-span-2 sm:col-start-3 md:col-span-1 md:row-span-5 row-span-4">
             <Image
-              src="/assets/images/design/hero_page_2.png"
+              src="/assets/images/design/product_hero_1.png"
               loading="lazy"
               alt="Workwear"
               fill
@@ -162,7 +162,7 @@ const HeroSection = ({ onMenuOpen, ready }: HeroSectionProps) => {
 
           <div className="relative overflow-hidden col-start-5 col-span-2 md:col-start-auto md:col-span-1 md:row-span-6 row-span-5">
             <Image
-              src="/assets/images/design/hero_3.png"
+              src="/assets/images/design/home_1.png"
               loading="lazy"
               alt="Workwear"
               fill
