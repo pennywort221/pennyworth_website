@@ -185,19 +185,9 @@ const HeroSection = ({ onMenuOpen, ready }: HeroSectionProps) => {
               ))} */}
               <br />
               <span className="md:heading-xl-semibold">
-                {"Industrial-Grade Quality,Lifestyle-Inspired Design,"
-                  .split(",")
-                  .map((part, i, arr) => (
-                    <span key={i}>
-                      {part}
-                      {i < arr.length - 1 && (
-                        <>
-                          .
-                          <br />
-                        </>
-                      )}
-                    </span>
-                  ))}
+                <span className="word inline-block">
+                  Industrial-Grade Quality,<br/>Lifestyle-Inspired Design
+                </span>
               </span>
             </h1>
 
@@ -206,7 +196,7 @@ const HeroSection = ({ onMenuOpen, ready }: HeroSectionProps) => {
                 <p className="md:text-body-lg text-body-sm text-secondary mb-8  mt-8 text-left ml-5">
                   {/* India&apos;s Biggest Manufacturer of Flame-Resistant Workwear
                    */}
-                   India’s Biggest Contract Manufacturer- Since 2014
+                  India’s Biggest Contract Manufacturer- Since 2014
                   {/* <br className="hidden md:block" />& Custom Uniforms{" "}
                   <span className="text-secondary font-medium">Since 2014</span> */}
                 </p>
