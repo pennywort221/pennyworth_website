@@ -35,7 +35,7 @@ const AboutSection = () => {
         },
       });
 
-      // Paragraphs
+
       gsap.from(textRefs.current, {
         y: 20,
         opacity: 0,
@@ -47,8 +47,6 @@ const AboutSection = () => {
           start: "top 75%",
         },
       });
-
-      // Features
       gsap.from(featureRefs.current, {
         x: -30,
         opacity: 0,
@@ -61,7 +59,6 @@ const AboutSection = () => {
         },
       });
 
-      // Button
       gsap.from(buttonRef.current, {
         y: 20,
         opacity: 0,
