@@ -52,10 +52,11 @@ export const productBySlugQuery = `
 
 
 export const signatureProductsQuery = `
-*[_type == "product" == true] {
+*[_type == "product"]
+| order(order asc, _createdAt desc){
   title,
   "slug": slug.current,
-  cardOverlay {
+  cardOverlay{
     description,
     materials,
     applications,
@@ -87,6 +88,15 @@ export const homeVideosQuery = `
 }
 `;
 ;
+export const testimonialsQuery = `
+*[_type == "testimonial" && isActive == true]
+| order(order asc, _createdAt desc){
+  _id,
+  quote,
+  author,
+  company
+}[0...10]
+`;
 
 
 

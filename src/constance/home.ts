@@ -58,7 +58,7 @@ export const features = [
   {
     icon: ShieldCheck,
     title: "Certified Safety Standards",
-    description: "EN ISO 11612, NFPA 2112, EN 1149 compliant",
+    description: "Adhering to EN ISO 11612, NFPA 2112, EN 1149 and other recognized international standards.",
   },
   {
     icon: Factory,

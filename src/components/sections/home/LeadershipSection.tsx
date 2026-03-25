@@ -73,17 +73,17 @@ const LeadershipSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 ">
         <div
           ref={imageRef}
-          className="relative w-full flex items-end h-[320px] md:h-[420px] order-2 lg:order-1"
+          className="relative md:bottom-0 bottom-16  md:items-end items-center w-full flex justify-center md:flex-row flex-col md:h-[420px] order-2 lg:order-1"
         >
           <Image
-            src="/assets/images/persons/anand_paul.png"
+            src="/assets/images/persons/anand_paul.jpg"
             alt="Anand Paul"
-            width={320}
-            height={320}
+            width={300}
+            height={300}
             loading="lazy"
-            className="object-contain"
+            className="object-contain z-40"
           />
-          <div className="lg:hidden lg:col-span-2 flex flex-col justify-end">
+          <div className="lg:hidden lg:col-span-2 flex flex-col mt-3 justify-end text-center">
             <h3 className="heading-l-lg">Anand Paul</h3>
             <p className="md:text-body-md text-body-xs">Managing Director</p>
           </div>
@@ -104,7 +104,7 @@ const LeadershipSection = () => {
           <div className="relative">
             <span
               ref={quoteRef}
-              className="flex justify-end relative top-10 sm:top-auto text-[120px] leading-none text-gray-200 font-serif"
+              className="flex justify-end relative top-10 sm:top-auto text-[120px] leading-none text-gray-200 font-serif -z-10"
             >
               <Comma />
               <Comma />

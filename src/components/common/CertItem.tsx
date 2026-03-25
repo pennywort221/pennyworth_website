@@ -18,7 +18,7 @@ function CertItem({
         {desc}
       </div>
       {showDivider && (
-        <span className="absolute right-[-4%] top-4 h-16 w-px bg-primary/20" />
+        <span className="absolute right-[-4%] md:block hidden top-4 h-16 w-px bg-primary/20" />
       )}
     </div>
   );

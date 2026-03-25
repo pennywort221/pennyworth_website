@@ -9,6 +9,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import { Globe, Mail, Phone } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,6 +57,7 @@ export default function Footer() {
             start: "top bottom",
             end: "bottom top",
             scrub: true,
+            invalidateOnRefresh: true,
           },
         },
       );
@@ -187,40 +189,65 @@ export default function Footer() {
             <hr className="border-muted-secondary_light/40 mb-3" />
 
             <div className="space-y-1">
-              {section.lines.map((line, i) => (
-                <p
-                  key={i}
-                  className={`md:text-body-lg text-body-xs ${
-                    section.highlightLast && i === section.lines.length - 1
+              {section.lines.map((line, i) => {
+                const isPhone = line.includes("+");
+                const isEmail = line.includes("@");
+                const isWeb = line.includes("www.");
+
+                return (
+                  <p
+                    key={i}
+                    className={`md:text-body-lg text-body-xs flex items-center gap-2 ${section.highlightLast && i === section.lines.length - 1
                       ? "text-danger"
                       : "text-muted-secondary"
-                  }`}
-                >
-                  {line.includes("www.") ? (
-                    <a
-                      href={`https://${line}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      {line}
-                    </a>
-                  ) : line.includes("@") ? (
-                    <a href={`mailto:${line}`} className="hover:underline">
-                      {line}
-                    </a>
-                  ) : line.startsWith("+") ? (
-                    <a
-                      href={`tel:${line.replace(/[^+\d]/g, "")}`}
-                      className="hover:underline"
-                    >
-                      {line}
-                    </a>
-                  ) : (
-                    line
-                  )}
-                </p>
-              ))}
+                      }`}
+                  >
+                    {isPhone ? (
+                      <>
+                        <Phone size={16} />
+
+                        {line.split("|").map((num, idx) => {
+                          const cleanNum = num.trim();
+                          return (
+                            <span key={idx} className="flex items-center gap-2">
+                              <a
+                                href={`tel:${cleanNum.replace(/[^+\d]/g, "")}`}
+                                className="hover:underline"
+                              >
+                                {cleanNum}
+                              </a>
+                              {idx !== line.split("|").length - 1 && (
+                                <Phone size={16} />
+                              )}
+                            </span>
+                          );
+                        })}
+                      </>
+                    ) : isEmail ? (
+                      <>
+                        <Mail size={16} />
+                        <a href={`mailto:${line}`} className="hover:underline">
+                          {line}
+                        </a>
+                      </>
+                    ) : isWeb ? (
+                      <>
+                        <Globe size={16} />
+                        <a
+                          href={`https://${line}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                        >
+                          {line}
+                        </a>
+                      </>
+                    ) : (
+                      line
+                    )}
+                  </p>
+                );
+              })}
             </div>
           </div>
         ))}

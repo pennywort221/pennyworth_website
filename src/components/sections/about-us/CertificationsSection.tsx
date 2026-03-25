@@ -34,13 +34,37 @@ const certifications = [
     showDivider: true,
   },
   {
-    src: "/assets/images/logo/ASTM_certification.png",
-    desc: "Arc-Rated and Flame-Resistant Protective Clothing",
+    src: "/assets/images/logo/en388.png",
+    desc: "Protective Gloves Against Mechanical Risks",
     showDivider: true,
   },
   {
-    src: "/assets/images/logo/oeko.png",
-    desc: "Textile Safety (Select Products)",
+    src: "/assets/images/logo/EN21420.jpg",
+    desc: "General Requirements for Protective Gloves",
+    showDivider: true,
+  },
+  {
+    src: "/assets/images/logo/EN407.png",
+    desc: "Protective Gloves Against Thermal Risks",
+  },
+  {
+    src: "/assets/images/logo/ANSIISEA138.png",
+    desc: "Impact Protection for Gloves",
+    showDivider: true,
+  },
+  {
+    src: "/assets/images/logo/nfpa-70e.png",
+    desc: "Electrical Safety in the Workplace",
+    showDivider: true,
+  },
+  {
+    src: "/assets/images/logo/IEC61482.webp",
+    desc: "Protective Clothing Against Electric Arc",
+    showDivider: true,
+  },
+  {
+    src: "/assets/images/logo/ce-mark_0.png",
+    desc: "European Conformity Marking",
   },
 ];
 
@@ -69,7 +93,7 @@ function CertificationsSection() {
         scale: 0.95,
         duration: 0.8,
         ease: "power3.out",
-        stagger: 0.15,
+        stagger: 0.1,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
@@ -81,19 +105,13 @@ function CertificationsSection() {
     return () => ctx.revert();
   }, []);
 
-  const row1Small = certifications.slice(0, 3);
-  const row2Small = certifications.slice(3, 5);
-  const row3Small = certifications.slice(5, 7);
-
-  const row1Md = certifications.slice(0, 4);
-  const row2Md = certifications.slice(4, 7);
-
   return (
     <section
       ref={sectionRef}
       className="bg-secondary md:mb-10 py-14 md:py-24 px-4 md:px-10"
     >
       <div className="max-w-7xl mx-auto">
+        {/* Heading */}
         <div className="cert-heading flex items-center justify-center gap-4 mb-14">
           <span className="md:text-m-md text-xm">★</span>
           <h2 className="md:text-body-lg text-body-sm text-primary uppercase">
@@ -102,53 +120,13 @@ function CertificationsSection() {
           <span className="md:text-m-md text-xm">★</span>
         </div>
 
-        <div className="md:hidden space-y-10">
-          <div className="grid grid-cols-3 gap-x-6 place-items-center">
-            {row1Small.map((item, i) => (
-              <div key={i} className="cert-item">
-                <CertItem {...item} />
-              </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center">
-            <div className="grid grid-cols-2 gap-x-6 place-items-center">
-              {row2Small.map((item, i) => (
-                <div key={i} className="cert-item">
-                  <CertItem {...item} />
-                </div>
-              ))}
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-10 place-items-center">
+          {certifications.map((item, i) => (
+            <div key={i} className="cert-item">
+              <CertItem {...item} />
             </div>
-          </div>
-
-          <div className="flex justify-center">
-            <div className="grid grid-cols-2 gap-x-6 place-items-center">
-              {row3Small.map((item, i) => (
-                <div key={i} className="cert-item">
-                  <CertItem {...item} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="hidden md:block space-y-10">
-          <div className="grid grid-cols-4 gap-x-6 place-items-center">
-            {row1Md.map((item, i) => (
-              <div key={i} className="cert-item">
-                <CertItem {...item} />
-              </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center">
-            <div className="grid grid-cols-3 gap-x-6 place-items-center">
-              {row2Md.map((item, i) => (
-                <div key={i} className="cert-item">
-                  <CertItem {...item} />
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
