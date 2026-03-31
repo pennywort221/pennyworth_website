@@ -81,8 +81,6 @@ function TestimonialSection() {
     center: { x: 0, opacity: 1 },
     exit: (dir: number) => ({ x: dir > 0 ? -40 : 40, opacity: 0 }),
   };
-
-  // If no testimonials in Sanity, hide section (or you can show a fallback)
   if (!total || !active) return null;
 
   return (
