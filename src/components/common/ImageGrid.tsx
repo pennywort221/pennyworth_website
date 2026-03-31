@@ -96,7 +96,7 @@ const ImageGrid = () => {
         className="absolute top-[24%] left-0 w-full h-[52%] overflow-hidden z-10"
       >
         <Image
-          src="/assets/images/design/about.png"
+          src="/assets/images/design/about_5.png"
           alt="Premium striped dress shirts"
           fill
           loading="lazy"
