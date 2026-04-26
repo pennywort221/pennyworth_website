@@ -98,7 +98,15 @@ export const testimonialsQuery = `
 }[0...10]
 `;
 
-
-
-
-
+export const blogBySlugQuery = `*[
+  _type == "blog"
+  && slug.current == $slug
+][0]{
+  _id,
+  title,
+  description,
+  slug,
+  publishedAt,
+  "image": image.asset->url,
+  body
+}`;

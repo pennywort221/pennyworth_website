@@ -1,0 +1,56 @@
+{
+  "query": "*[_type==\"blog\"][0]",
+  "result": {
+    "_createdAt": "2026-01-28T19:35:40Z",
+    "_id": "0dfd6c6b-be56-43c0-a223-e1b8b13906bd",
+    "_rev": "zHGMcSO7JRv77weGXiMlh8",
+    "_system": {
+      "base": {
+        "id": "0dfd6c6b-be56-43c0-a223-e1b8b13906bd",
+        "rev": "zHGMcSO7JRv77weGXiLJQq"
+      }
+    },
+    "_type": "blog",
+    "_updatedAt": "2026-01-28T19:40:53Z",
+    "body": [
+      {
+        "_key": "1e6eb74955cd",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4f76a36a8dfb",
+            "_type": "span",
+            "marks": [
+              "em",
+              "code"
+            ],
+            "text": "demo"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "description": "Discover why more companies are investing in uniforms as a branding strategy. ",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-21d642a5ad8547695798e72b3390f1245b464165-1740x1216-png",
+        "_type": "reference"
+      }
+    },
+    "publishedAt": "2026-01-20T09:32:24.701Z",
+    "seo": {
+      "noIndex": false
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "how-custom-uniforms-build-brand-identity"
+    },
+    "title": "How Custom Uniforms Build Brand Identity"
+  },
+  "syncTags": [
+    "s1:KexArw"
+  ],
+  "ms": 2
+}

@@ -33,7 +33,7 @@ function BlogCard({ blog }: { blog: Blog }) {
           </p>
         </div>
 
-        {/* <Link href={`/blog/${blog.slug.current}`}> */}
+        <Link href={`/blogs/${blog.slug.current}`}>
           <Button
             variant="heroPrimary"
             size="lg"
@@ -42,7 +42,7 @@ function BlogCard({ blog }: { blog: Blog }) {
             Read More
             <ArrowRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Button>
-        {/* </Link> */}
+        </Link>
       </div>
     </div>
   );
