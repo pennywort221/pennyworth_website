@@ -113,7 +113,8 @@ export default function Footer() {
                     {link.download ? (
                       <a
                         href={link.url}
-                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-secondary md:text-body-md-bold text-body-sm-bold"
                       >
                         {link.label}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { WhatsAppBubble } from "@/components/common/WhatsAppBubble";
 
 const SITE_NAME = "Pennywort Clothing";
 const SITE_URL = "https://pennywortclothing.com"; 
@@ -100,6 +101,7 @@ export default function RootLayout({
         className={`antialiased`}
       >
         {children}
+        <WhatsAppBubble />
       </body>
     </html>
   );

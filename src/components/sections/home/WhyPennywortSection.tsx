@@ -109,32 +109,25 @@ export default function WhyPennywortSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:text-body-md text-body-sm leading-relaxed text-primary mt-10">
           <div className="space-y-4">
             <p ref={(el: any) => (textRefs.current[0] = el)}>
-              At Pennywort Limited (PW), we connect global businesses with the
-              power of India’s leading production sectors.
+              The strength of India’s production sector has been on advantage for Pennywort Limited to connect with global businesses around the world.
             </p>
 
             <p ref={(el: any) => (textRefs.current[1] = el)}>
-              We collaborate with some of the biggest and most trusted companies
-              in India to bring high-quality products to life. Over the years,
-              PW has built strong, long-term relationships with top
-              manufacturers across the country—giving us unmatched access to
-              India’s production capacity.
+              We collaborate with the largest and most trusted companies in India to deliver high quality products to life. Over the years, we have built strong, long term relationships with top manufacturers across the country which enabled us to access India’s production capacity.
             </p>
           </div>
 
           <div className="space-y-4">
             <p ref={(el: any) => (textRefs.current[2] = el)}>
-              With our nationwide network, PW can manufacture and deliver almost
-              any product on time and at scale, ensuring consistency,
-              reliability, and competitive turnaround.
+              We manufacture and deliver across diverse product categories of every scale consistently with our national presence and the trust, transparency and strong partnerships were built upon it. Connections with leading companies around the globe makes Pennywort Limited a reliable partner for businesses around the globe.
             </p>
 
-            <p ref={(el: any) => (textRefs.current[3] = el)}>
+            {/* <p ref={(el: any) => (textRefs.current[3] = el)}>
               Our reputation for trust, transparency, and deep connections with
               high-end companies worldwide makes Pennywort Limited a preferred
               partner for businesses seeking quality production and seamless
               delivery.
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="cert-title flex items-center justify-center gap-4 mt-20 mb-10 md:text-m-md text-xm">
@@ -158,8 +151,7 @@ export default function WhyPennywortSection() {
               <div
                 key={i}
                 ref={(el: any) => (logosRef.current[i] = el)}
-                className={`absolute ${
-                  [
+                className={`absolute ${[
                     "top-[4%] md:top-[0%] left-[40%] -translate-x-1/2",
                     "top-[22%] left-[5%]",
                     "top-[20%] right-[6%]",
@@ -170,7 +162,7 @@ export default function WhyPennywortSection() {
                     "bottom-[30%] right-[5%]",
                     "bottom-[16%] left-[74%] -translate-x-1/2",
                   ][i]
-                }`}
+                  }`}
               >
                 <CertLogo src={src} />
               </div>
