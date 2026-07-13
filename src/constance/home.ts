@@ -238,7 +238,7 @@ export const footerLinksData = [
 export const navigationLinks = [
   { label: "HOME", url: "/" },
   { label: "ABOUT US", url: "/about-us" },
-  { label: "BLOG", url: "/blog" },
+  { label: "BLOG", url: "/blogs" },
   { label: "CONTACT US", url: "/contact-us" },
 ];
 
