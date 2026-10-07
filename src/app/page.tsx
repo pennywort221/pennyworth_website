@@ -20,7 +20,7 @@ import IntroLoader from "@/components/layout/IntroLoader";
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [loadingDone, setLoadingDone] = useState(false);
-  const [shouldShowLoader, setShouldShowLoader] = useState(false);
+  const [shouldShowLoader, setShouldShowLoader] = useState(true);
 
 
   //this is not a right way to set the intro loader

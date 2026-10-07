@@ -3,8 +3,8 @@ import "./globals.css";
 import { WhatsAppBubble } from "@/components/common/WhatsAppBubble";
 
 const SITE_NAME = "Pennywort Clothing";
-const SITE_URL = "https://pennywortclothing.com"; 
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.svg`; 
+const SITE_URL = "https://www.pennywort.in";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.svg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
 
-  
+
   openGraph: {
     type: "website",
     url: SITE_URL,
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
   },
 
-  
+
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} | ISO Certified Workwear & Uniform Manufacturer India`,
@@ -87,7 +87,9 @@ export const metadata: Metadata = {
     images: [DEFAULT_OG_IMAGE],
   },
 
-
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -95,11 +97,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Pennywort Clothing",
+    url: "https://www.pennywort.in",
+    logo: "https://www.pennywort.in/assets/images/design/penny-wort-logo.png",
+    description:
+      "ISO 9001:2015 certified workwear and uniform manufacturer in India. We supply FR coveralls, safety workwear, industrial gloves, and custom uniforms for global industries.",
+  };
   return (
     <html lang="en">
       <body
         className={`antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
         <WhatsAppBubble />
       </body>

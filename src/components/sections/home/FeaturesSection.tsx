@@ -6,14 +6,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function FeaturesSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
-
-  // Track scroll progress of THIS section
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"], // smooth & reliable
+    offset: ["start end", "end start"], 
   });
 
-  // Parallax helpers (GSAP depth equivalent)
+
   const card1Y = useTransform(scrollYProgress, [0, 1], ["50%", "-50%"]);
   const card2Y = useTransform(scrollYProgress, [0, 1], ["75%", "-75%"]);
   const card3Y = useTransform(scrollYProgress, [0, 1], ["100%", "-100%"]);
@@ -21,32 +19,26 @@ export default function FeaturesSection() {
 
   return (
     <section ref={sectionRef} className="relative md:mx-10 mx-5 mt-12">
-      {/* Heading */}
       <div className="pt-4 mb-8">
         <h2 className="md:text-body-lg text-body-sm text-primary mb-2">
           Building a Responsible Future
         </h2>
         <hr className="border-t border-main border-muted-foreground/50" />
       </div>
-
-      {/* Description */}
       <div className="md:text-body-md text-body-sm text-primary leading-relaxed mb-8 md:mb-[149px]">
         At Pennywort, sustainability isn&apos;t an afterthought—it&apos;s <br />
         woven into every thread. We&apos;re committed to:
       </div>
 
-      {/* Desktop Parallax Layout */}
       <div className="relative w-full mb-14 px-4 md:px-8 lg:px-16">
         <div className="relative w-full md:min-h-[751px] mx-auto">
-          {/* Ellipse */}
+       
           <img
             src="/assets/images/design/ellipse.png"
             alt="Ellipse"
             className="md:absolute top-0 left-[calc(50%-350px)]
                        lg:w-[700px] lg:h-[700px] lg:object-cover"
           />
-
-          {/* Card 1 */}
           <motion.div
             style={{ y: card1Y }}
             className="absolute top-[4%] left-[25%] -translate-x-[110%]
@@ -61,7 +53,6 @@ export default function FeaturesSection() {
             </div>
           </motion.div>
 
-          {/* Card 2 */}
           <motion.div
             style={{ y: card2Y }}
             className="absolute top-[20%] lg:left-[80%] lg2:left-[81%] translate-x-[58%]
@@ -75,8 +66,6 @@ export default function FeaturesSection() {
               Fair wages, safe working conditions, zero child labor
             </div>
           </motion.div>
-
-          {/* Card 3 */}
           <motion.div
             style={{ y: card3Y }}
             className="absolute top-[52%] lg:-left-[5%] lg2:left-[3%]
@@ -108,7 +97,7 @@ export default function FeaturesSection() {
         </div>
       </div>
 
-      {/* Mobile Grid */}
+     
       <div className="lg:hidden grid grid-cols-2 mb-8">
         {sustainabilityFeaturesData.map((feature, index) => (
           <div
