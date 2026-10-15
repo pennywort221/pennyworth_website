@@ -116,6 +116,31 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <nav
+          aria-label="Site navigation"
+          style={{
+            position: "absolute",
+            width: "1px",
+            height: "1px",
+            padding: 0,
+            margin: "-1px",
+            overflow: "hidden",
+            clip: "rect(0, 0, 0, 0)",
+            whiteSpace: "nowrap",
+            borderWidth: 0,
+          }}
+        >
+          <a href="/">Home</a>
+          <a href="/about-us">About Us</a>
+          <a href="/products">Products</a>
+          <a href="/blogs">Blog</a>
+          <a href="/contact-us">Contact Us</a>
+          <a href="/product-details/fr-coveralls">Flame-Resistant Coveralls</a>
+          <a href="/product-details/safety-vests">High-Visibility Safety Vests</a>
+          <a href="/product-details/corporate-tshirts">Corporate &amp; Custom T-Shirts</a>
+          <a href="/product-details/work-gloves">Industrial Work Gloves</a>
+          <a href="/product-details/medical-scrubs">Medical Scrubs &amp; Lab Coats</a>
+        </nav>
         <WhatsAppBubble />
       </body>
     </html>
