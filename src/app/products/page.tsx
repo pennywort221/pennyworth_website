@@ -1,24 +1,9 @@
-"use client";
+import type { Metadata } from "next";
+import { getMetadata } from "@/lib/metadata";
+import ProductsClient from "./ProductsClient";
 
-import Footer from "@/components/layout/Footer";
-import NavigationMenu from "@/components/layout/NavigationMenu";
-import HeroSection from "@/components/sections/products/HeroSection";
-import SignatureProductSection from "@/components/sections/products/SignatureProductSection";
-import React, { useState } from "react";
+export const metadata: Metadata = getMetadata("products");
 
-function products() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return (
-    <>
-      <HeroSection onMenuOpen={() => setIsMenuOpen(true)} />
-      <SignatureProductSection />
-      <Footer />
-      <NavigationMenu
-        isOpen={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
-      />
-    </>
-  );
+export default function ProductsPage() {
+  return <ProductsClient />;
 }
-
-export default products;
