@@ -3,7 +3,7 @@ import { getMetadata } from "@/lib/metadata";
 import ProductDetailClient from "./ProductDetailClient";
 
 type Props = {
-  params: Promise<{ product: string }> | { product: string };
+  params: Promise<{ product: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
